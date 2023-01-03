@@ -52,7 +52,7 @@ Modelo de resposta caso de certo:
 
 Modelo de resposta caso de errado:
 
-`{"Descrição do erro"}`
+```{"Descrição do erro"}```
 
 ### Login
 
@@ -90,7 +90,62 @@ Modelo de resposta caso de certo:
 ```
 
 Modelo de resposta caso de errado:
-{"Descrição do erro"}
+```{"Descrição do erro"}```
+
+# Rotas que necessitam de autorização
+
+### Atualização do Usuario
+
+PATCH /users/:id
+
+Modelo de Requisição:
+
+```
+{
+"name": "Borchoski",
+"age": "32"
+}
+```
+
+#### Respostas Da Resquisição: <br/>
+
+Modelo de resposta caso de certo:
+
+```
+{
+	"email": "joao@joao.com",
+	"password": "$2a$10$i5DXc0KFVTCDXWI/Pv3P1.Z3LsYZLdMtHkWja7qhU4ufMNa5qs6vO",
+	"age": "32",
+	"favoriteGames": [
+		"Fortnite",
+		"Valorant",
+		"Minecraft"
+	],
+	"socialMedia": "@joao_borchoski",
+	"id": 1,
+	"name": "Borchoski"
+}
+```
+
+Modelo de resposta caso de errado:
+```{"Descrição do erro"}```
+
+### Deletar Usuario
+
+DELETE /users/:id
+
+Requisição sem body.
+
+#### Respostas Da Resquisição: <br/>
+
+Modelo de resposta caso de certo:
+
+```
+{}
+```
+
+Modelo de resposta caso de errado:
+```{"Descrição do erro"}```
 
 ## Requerer Usuarios
 
@@ -135,7 +190,7 @@ Modelo de resposta caso de certo:
 ```
 
 Modelo de resposta caso de errado:
-`{"Descrição do erro"}`
+```{"Descrição do erro"}```
 
 ### Para listar um usuario especifico use:
 
@@ -162,59 +217,4 @@ Modelo de resposta caso de certo:
 ```
 
 Modelo de resposta caso de errado:
-`{"Descrição do erro"}`
-
-# Rotas que necessitam de autorização
-
-### Atualização do Usuario
-
-PATCH /users/:id
-
-Modelo de Requisição:
-
-```
-{
-"name": "Borchoski",
-"age": "32"
-}
-```
-
-#### Respostas Da Resquisição: <br/>
-
-Modelo de resposta caso de certo:
-
-```
-{
-	"email": "joao@joao.com",
-	"password": "$2a$10$i5DXc0KFVTCDXWI/Pv3P1.Z3LsYZLdMtHkWja7qhU4ufMNa5qs6vO",
-	"age": "32",
-	"favoriteGames": [
-		"Fortnite",
-		"Valorant",
-		"Minecraft"
-	],
-	"socialMedia": "@joao_borchoski",
-	"id": 1,
-	"name": "Borchoski"
-}
-```
-
-Modelo de resposta caso de errado:
-`{"Descrição do erro"}`
-
-### Deletar Usuario
-
-DELETE /users/:id
-
-Requisição sem body.
-
-#### Respostas Da Resquisição: <br/>
-
-Modelo de resposta caso de certo:
-
-```
-{}
-```
-
-Modelo de resposta caso de errado:
-`{"Descrição do erro"}`
+```{"Descrição do erro"}```

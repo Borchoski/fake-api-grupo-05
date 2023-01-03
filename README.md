@@ -91,10 +91,10 @@ Modelo de resposta caso de errado:
 
 # User
 
-Rotas utilizadas para fins relaçionados ao usuario
+Rotas utilizadas para fins relacionados ao usuario
 <br/>
 
-## Rotas que não necessitam de autorização:
+## Rotas que necessitam de autorização:
 
 ### Atualização do próprio Usuario
 

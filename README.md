@@ -9,12 +9,14 @@ A API tem um total de 6 endpoints, podendo cadastrar seu usuario, realizar login
 Para ter a sua base URl rode a API localmente e use "localhost:3001"
 
 ## Rotas que não necessitam de autorização
+
 ### Cadastro
 
 POST /register <br/>
 
 Modelo de Requisição:
 
+```
 {
 "email": "joao@joao.com",
 "password": "1212",
@@ -24,6 +26,9 @@ Modelo de Requisição:
 "Minecraft"],
 "socialMedia": "@joao_borchoski"
 }
+```
+
+<br/>
 <br/>
 
 Respostas Da Resquisição: <br/>
@@ -81,6 +86,6 @@ Modelo de resposta caso de certo:
 Modelo de resposta caso de errado:
 {"Descrição do erro"}
 
-## User 
+## User
 
 PATCH /

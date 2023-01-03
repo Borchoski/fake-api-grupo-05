@@ -204,6 +204,8 @@ Modelo de resposta caso de certo:
 Modelo de resposta caso de errado:
 `{"Descrição do erro"}`
 
+## Posts
+
 ### Criação de Post
 
 POST /posts

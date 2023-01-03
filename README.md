@@ -1,10 +1,12 @@
 # json-server-base
 
 Esse é o repositório com a base de JSON-Server + JSON-Server-Auth já configurada, feita para ser usada em nosso Projeto FrontEnd.
+<br/>
 
 ## Endpoints
 
 A API tem um total de 6 endpoints, podendo cadastrar seu usuario, realizar login, atualizar e deletar o usuario alem de buscar os mesmos.
+<br/>
 
 Para ter a sua base URl rode a API localmente e use "localhost:3001"
 
@@ -29,7 +31,7 @@ Modelo de Requisição:
 ```
 
 <br/>
-<br/>
+
 
 Respostas Da Resquisição: <br/>
 
@@ -71,7 +73,7 @@ Modelo de Requisição:
 ```
 <br/>
 
-Respostas Da Resquisição: <br/>
+### Respostas Da Resquisição: 
 
 Modelo de resposta caso de certo:
 ```

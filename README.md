@@ -34,6 +34,8 @@ Modelo de Requisição:
 Respostas Da Resquisição: <br/>
 
 Modelo de resposta caso de certo:
+
+```
 {
 "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFubmFAYW5uYS5jb20iLCJpYXQiOjE2NzI3NDk2NDQsImV4cCI6MTY3Mjc1MzI0NCwic3ViIjoiMiJ9.htijfuvCLwWCALTPb3PFm1-QXnk-ztnUHZwtugEIh_o",
 "user": {
@@ -46,26 +48,33 @@ Modelo de resposta caso de certo:
 "socialMedia": "@joao_borchoski",
 "id": 2
 }
+}
+```
+
 <br/>
 Modelo de resposta caso de errado:
-{"Descrição do erro"}
-}
+
+`{"Descrição do erro"}`
+
+
 
 ### Login
 
 POST /login <br/>
 
 Modelo de Requisição:
-
+```
 {
 "email": "joao@joao.com",
 "password": "1212"
 }
+```
 <br/>
 
 Respostas Da Resquisição: <br/>
 
 Modelo de resposta caso de certo:
+```
 {
 "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvYW9Aam9hby5jb20iLCJpYXQiOjE2NzI3NTA0NzgsImV4cCI6MTY3Mjc1NDA3OCwic3ViIjoiMSJ9.HrlTeC6hF1dWgIIOiIFd8ynUBkxCuyLSmH4HMY5a6Ss",
 "user": {
@@ -81,6 +90,7 @@ Modelo de resposta caso de certo:
 "name": "joao"
 }
 }
+```
 <br/>
 
 Modelo de resposta caso de errado:

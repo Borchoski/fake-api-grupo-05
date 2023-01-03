@@ -32,7 +32,6 @@ Modelo de Requisição:
 
 <br/>
 
-
 Respostas Da Resquisição: <br/>
 
 Modelo de resposta caso de certo:
@@ -58,24 +57,26 @@ Modelo de resposta caso de errado:
 
 `{"Descrição do erro"}`
 
-
-
 ### Login
 
 POST /login <br/>
 
 Modelo de Requisição:
+
 ```
 {
 "email": "joao@joao.com",
 "password": "1212"
 }
 ```
+
 <br/>
 
-### Respostas Da Resquisição: 
+Respostas Da Resquisição:
+<br/>
 
 Modelo de resposta caso de certo:
+
 ```
 {
 "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvYW9Aam9hby5jb20iLCJpYXQiOjE2NzI3NTA0NzgsImV4cCI6MTY3Mjc1NDA3OCwic3ViIjoiMSJ9.HrlTeC6hF1dWgIIOiIFd8ynUBkxCuyLSmH4HMY5a6Ss",
@@ -93,11 +94,68 @@ Modelo de resposta caso de certo:
 }
 }
 ```
+
 <br/>
 
 Modelo de resposta caso de errado:
 {"Descrição do erro"}
 
-## User
+## Rotas que necessitam de autorização
 
-PATCH /
+### Atualização do Usuario
+
+PATCH /users/:id
+
+<br/>
+
+Modelo de Requisição:
+
+```
+{
+"name": "Borchoski",
+"age": "32"
+}
+```
+
+<br/>
+Modelo de resposta caso de certo:
+
+```
+{
+	"email": "joao@joao.com",
+	"password": "$2a$10$i5DXc0KFVTCDXWI/Pv3P1.Z3LsYZLdMtHkWja7qhU4ufMNa5qs6vO",
+	"age": "32",
+	"favoriteGames": [
+		"Fortnite",
+		"Valorant",
+		"Minecraft"
+	],
+	"socialMedia": "@joao_borchoski",
+	"id": 1,
+	"name": "Borchoski"
+}
+```
+
+<br/>
+
+Modelo de resposta caso de errado:
+{"Descrição do erro"}
+
+### Deletar Usuario
+
+DELETE /users/:id
+
+<br/>
+
+Requisição sem body.
+
+Modelo de resposta caso de certo:
+
+```
+{}
+```
+
+<br/>
+
+Modelo de resposta caso de errado:
+{"Descrição do erro"}

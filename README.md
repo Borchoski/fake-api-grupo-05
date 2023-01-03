@@ -10,11 +10,13 @@ A API tem um total de 6 endpoints, podendo cadastrar seu usuario, realizar login
 
 Para ter a sua base URl rode a API localmente e use "localhost:3001"
 
-# Rotas que não necessitam de autorização
+<!-- # Rotas que não necessitam de autorização -->
 
-### Cadastro
+## Cadastro
 
 POST /register
+
+Não necessita de autorização
 
 Modelo de Requisição:
 
@@ -54,9 +56,11 @@ Modelo de resposta caso de errado:
 
 ```{"Descrição do erro"}```
 
-### Login
+## Login
 
 POST /login
+
+Não necessita de autorização
 
 Modelo de Requisição:
 
@@ -92,9 +96,15 @@ Modelo de resposta caso de certo:
 Modelo de resposta caso de errado:
 ```{"Descrição do erro"}```
 
-# Rotas que necessitam de autorização
+<!-- # Rotas que necessitam de autorização -->
 
-### Atualização do Usuario
+## User
+Rotas utilizadas para fins relaçionados ao usuario
+<br/>
+
+### Rotas que necessitam de autorização:
+
+### Atualização do próprio Usuario
 
 PATCH /users/:id
 
@@ -130,7 +140,7 @@ Modelo de resposta caso de certo:
 Modelo de resposta caso de errado:
 ```{"Descrição do erro"}```
 
-### Deletar Usuario
+### Deletar próprio Usuario
 
 DELETE /users/:id
 
@@ -147,7 +157,12 @@ Modelo de resposta caso de certo:
 Modelo de resposta caso de errado:
 ```{"Descrição do erro"}```
 
-## Requerer Usuarios
+
+
+
+
+
+<!-- ## Requerer Usuarios
 
 ### Para listar todos os usuarios use:
 
@@ -217,4 +232,4 @@ Modelo de resposta caso de certo:
 ```
 
 Modelo de resposta caso de errado:
-```{"Descrição do erro"}```
+```{"Descrição do erro"}``` -->

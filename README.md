@@ -92,7 +92,7 @@ Modelo de resposta caso de certo:
 Modelo de resposta caso de errado:
 {"Descrição do erro"}
 
-### Requerer Usuarios
+## Requerer Usuarios
 
 ### Para listar todos os usuarios use:
 

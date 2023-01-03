@@ -3,15 +3,6 @@
 Esse é o repositório com a base de JSON-Server + JSON-Server-Auth já configurada, feita para ser usada em nosso Projeto FrontEnd.
 <br/>
 
-## Endpoints
-
-A API tem um total de 6 endpoints, podendo cadastrar seu usuario, realizar login, atualizar e deletar o usuario alem de buscar os mesmos.
-<br/>
-
-Para ter a sua base URl rode a API localmente e use "localhost:3001"
-
-<!-- # Rotas que não necessitam de autorização -->
-
 ## Cadastro
 
 POST /register
@@ -98,12 +89,12 @@ Modelo de resposta caso de errado:
 
 <!-- # Rotas que necessitam de autorização -->
 
-## User
+# User
 
 Rotas utilizadas para fins relaçionados ao usuario
 <br/>
 
-## Rotas que necessitam de autorização:
+## Rotas que não necessitam de autorização:
 
 ### Atualização do próprio Usuario
 

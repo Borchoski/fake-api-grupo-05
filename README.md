@@ -15,6 +15,7 @@ Modelo de Requisição:
 {
 "email": "joao@joao.com",
 	"password": "1212",
+	"name": "João Borchoski"
 	"age": "20",
 	"favoriteGames": [
 		{
@@ -47,6 +48,7 @@ Modelo de resposta caso de certo:
 "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvYW9Aam9hby5jb20iLCJpYXQiOjE2NzI3NjQ5NzQsImV4cCI6MTY3Mjc2ODU3NCwic3ViIjoiMSJ9.6b5uaKQnxksDcVrXcjLufX-0N2nFuyKx04D5vgZqYKU",
 	"user": {
 		"email": "joao@joao.com",
+		"name": "João Borchoski",
 		"age": "20",
 		"favoriteGames": [
 			{
@@ -97,10 +99,11 @@ Modelo de resposta caso de certo:
 
 ```
 {
-	"accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvYW9Aam9hby5jb20iLCJpYXQiOjE2NzI3NjU1MDEsImV4cCI6MTY3Mjc2OTEwMSwic3ViIjoiMSJ9.ojLu8K2tUfUTCexEI8Qpclrj4lMpp0ei5y5_nGrOXTg",
+		"accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvYW9Aam9hby5jb20iLCJpYXQiOjE2NzI3NjYwMTcsImV4cCI6MTY3Mjc2OTYxNywic3ViIjoiMSJ9.2J-riwhQrFAlsYeTo27yWn2oDg7t3YG95yI-2lvnOXw",
 	"user": {
 		"email": "joao@joao.com",
-		"age": "20",
+		"name": "João Borchoski",
+		"age": "32",
 		"favoriteGames": [
 			{
 				"name": "Fortinite",
@@ -120,15 +123,13 @@ Modelo de resposta caso de certo:
 			}
 		],
 		"socialMedia": "@joao_borchoski",
-		"id": 1
+		"id": 1,
 	}
 }
 ```
 
 Modelo de resposta caso de errado:
 `{"Descrição do erro"}`
-
-<!-- # Rotas que necessitam de autorização -->
 
 # User
 
@@ -156,8 +157,9 @@ Modelo de resposta caso de certo:
 
 ```
 {
-		"email": "joao@joao.com",
+	"email": "joao@joao.com",
 	"password": "$2a$10$TmkqJZ3wgsLNWN8MInbfFeWQPiEDkcI4lXy3yDeW7HVx9MYT3ufO2",
+	"name": "Borchoski",
 	"age": "32",
 	"favoriteGames": [
 		{
@@ -178,8 +180,7 @@ Modelo de resposta caso de certo:
 		}
 	],
 	"socialMedia": "@joao_borchoski",
-	"id": 1,
-	"name": "Borchoski"
+	"id": 1
 }
 ```
 
@@ -278,7 +279,94 @@ Modelo de resposta caso de certo:
 Modelo de resposta caso de errado:
 `{"Descrição do erro"}`
 
-## Rotas que necessitam de autorização:
+## Listar Usuarios
+
+### Para listar todos os usuarios use:
+
+GET /users
+
+Requisição sem body.
+
+#### Respostas Da Resquisição: <br/>
+
+Modelo de resposta caso de certo:
+
+```
+[
+    	{
+		"email": "joao@joao.com",
+		"password": "$2a$10$i5DXc0KFVTCDXWI/Pv3P1.Z3LsYZLdMtHkWja7qhU4ufMNa5qs6vO",
+		"name": "João Borchoski"
+		"age": "20",
+		"favoriteGames": [
+			"Fortnite",
+			"Valorant",
+			"Minecraft"
+		],
+		"socialMedia": "@joao_borchoski",
+		"id": 1,
+	},
+	{
+		"email": "anna@anna.com",
+		"password": "$2a$10$y.nBDceslzxMiG8Cif.Pvec35qKxJ742Mz9tml76AJHbkblAS1lya",
+		"name": "Anna"
+		"age": "20",
+		"favoriteGames": [
+			{
+				"name": "Disney Dreamlight Valley",
+				"genre": "RPG"
+			}
+		],
+		"socialMedia": "@anna",
+		"id": 2
+	}
+]
+```
+
+Modelo de resposta caso de errado:
+`{"Descrição do erro"}`
+
+### Para listar um usuario especifico use:
+
+GET /users/:id
+
+Requisição sem body.
+
+Modelo de resposta caso de certo:
+
+```
+{
+	"email": "joao@joao.com",
+	"password": "$2a$10$TmkqJZ3wgsLNWN8MInbfFeWQPiEDkcI4lXy3yDeW7HVx9MYT3ufO2",
+	"name": "joao",
+	"age": "32",
+	"favoriteGames": [
+		{
+			"name": "Fortinite",
+			"genre": "Battle royale"
+		},
+		{
+			"name": "PUBG",
+			"genre": "Battle royale"
+		},
+		{
+			"name": "Valorant",
+			"genre": "FPS"
+		},
+		{
+			"name": "Minecraft",
+			"genre": "Survival"
+		}
+	],
+	"socialMedia": "@joao_borchoski",
+	"id": 1
+}
+```
+
+Modelo de resposta caso de errado:
+`{"Descrição do erro"}`
+
+## Rotas que não necessitam de autorização:
 
 ### Listar Posts
 
@@ -304,74 +392,3 @@ Modelo de resposta caso de certo:
 Modelo de resposta caso de errado:
 `{"Descrição do erro"}`
 
-### Listar Usuarios
-
-### Para listar todos os usuarios use:
-
-GET /users
-
-Requisição sem body.
-
-#### Respostas Da Resquisição: <br/>
-
-Modelo de resposta caso de certo:
-
-```
-[
-    	{
-		"email": "joao@joao.com",
-		"password": "$2a$10$i5DXc0KFVTCDXWI/Pv3P1.Z3LsYZLdMtHkWja7qhU4ufMNa5qs6vO",
-		"age": "20",
-		"favoriteGames": [
-			"Fortnite",
-			"Valorant",
-			"Minecraft"
-		],
-		"socialMedia": "@joao_borchoski",
-		"id": 1,
-		"name": "joao"
-	},
-	{
-		"email": "anna@anna.com",
-		"password": "$2a$10$y.nBDceslzxMiG8Cif.Pvec35qKxJ742Mz9tml76AJHbkblAS1lya",
-		"age": "20",
-		"favoriteGames": [
-			"Fortnite",
-			"Valorant",
-			"Minecraft"
-		],
-		"socialMedia": "@joao_borchoski",
-		"id": 2
-	}
-]
-```
-
-Modelo de resposta caso de errado:
-`{"Descrição do erro"}`
-
-### Para listar um usuario especifico use:
-
-GET /users/:id
-
-Requisição sem body.
-
-Modelo de resposta caso de certo:
-
-```
-{
-	"email": "joao@joao.com",
-	"password": "$2a$10$i5DXc0KFVTCDXWI/Pv3P1.Z3LsYZLdMtHkWja7qhU4ufMNa5qs6vO",
-	"age": "20",
-	"favoriteGames": [
-		"Fortnite",
-		"Valorant",
-		"Minecraft"
-	],
-	"socialMedia": "@joao_borchoski",
-	"id": 1,
-	"name": "joao"
-}
-```
-
-Modelo de resposta caso de errado:
-`{"Descrição do erro"}`

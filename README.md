@@ -14,7 +14,7 @@ Para ter a sua base URl rode a API localmente e use "localhost:3001"
 
 ### Cadastro
 
-POST /register <br/>
+POST /register 
 
 Modelo de Requisição:
 
@@ -30,9 +30,9 @@ Modelo de Requisição:
 }
 ```
 
-<br/>
 
-Respostas Da Resquisição: <br/>
+
+#### Respostas Da Resquisição: <br/>
 
 Modelo de resposta caso de certo:
 
@@ -52,14 +52,13 @@ Modelo de resposta caso de certo:
 }
 ```
 
-<br/>
 Modelo de resposta caso de errado:
 
 `{"Descrição do erro"}`
 
 ### Login
 
-POST /login <br/>
+POST /login
 
 Modelo de Requisição:
 
@@ -70,10 +69,9 @@ Modelo de Requisição:
 }
 ```
 
-<br/>
 
-Respostas Da Resquisição:
-<br/>
+#### Respostas Da Resquisição: <br/>
+
 
 Modelo de resposta caso de certo:
 
@@ -95,8 +93,6 @@ Modelo de resposta caso de certo:
 }
 ```
 
-<br/>
-
 Modelo de resposta caso de errado:
 {"Descrição do erro"}
 
@@ -105,8 +101,6 @@ Modelo de resposta caso de errado:
 ### Atualização do Usuario
 
 PATCH /users/:id
-
-<br/>
 
 Modelo de Requisição:
 
@@ -117,7 +111,8 @@ Modelo de Requisição:
 }
 ```
 
-<br/>
+#### Respostas Da Resquisição: <br/>
+
 Modelo de resposta caso de certo:
 
 ```
@@ -136,7 +131,6 @@ Modelo de resposta caso de certo:
 }
 ```
 
-<br/>
 
 Modelo de resposta caso de errado:
 {"Descrição do erro"}
@@ -145,9 +139,9 @@ Modelo de resposta caso de errado:
 
 DELETE /users/:id
 
-<br/>
-
 Requisição sem body.
+
+#### Respostas Da Resquisição: <br/>
 
 Modelo de resposta caso de certo:
 
@@ -155,7 +149,5 @@ Modelo de resposta caso de certo:
 {}
 ```
 
-<br/>
-
 Modelo de resposta caso de errado:
-{"Descrição do erro"}
+`{"Descrição do erro"}`

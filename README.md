@@ -14,12 +14,27 @@ Modelo de Requisição:
 ```
 {
 "email": "joao@joao.com",
-"password": "1212",
-"age": "20",
-"favoriteGames": ["Fortnite",
-"Valorant",
-"Minecraft"],
-"socialMedia": "@joao_borchoski"
+	"password": "1212",
+	"age": "20",
+	"favoriteGames": [
+		{
+			"name": "Fortinite",
+			"genre": "Battle royale"
+		},
+		{
+			"name": "PUBG",
+			"genre": "Battle royale"
+		},
+		{
+			"name": "Valorant",
+			"genre": "FPS"
+		},
+		{
+			"name": "Minecraft",
+			"genre": "Survival"
+		}
+	],
+	"socialMedia": "@joao_borchoski"
 }
 ```
 
@@ -29,17 +44,31 @@ Modelo de resposta caso de certo:
 
 ```
 {
-"accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFubmFAYW5uYS5jb20iLCJpYXQiOjE2NzI3NDk2NDQsImV4cCI6MTY3Mjc1MzI0NCwic3ViIjoiMiJ9.htijfuvCLwWCALTPb3PFm1-QXnk-ztnUHZwtugEIh_o",
-"user": {
-"email": "joao@joao.com",
-"age": "20",
-"favoriteGames": [
-"Fortnite",
-"Valorant",
-"Minecraft"],
-"socialMedia": "@joao_borchoski",
-"id": 2
-}
+"accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvYW9Aam9hby5jb20iLCJpYXQiOjE2NzI3NjQ5NzQsImV4cCI6MTY3Mjc2ODU3NCwic3ViIjoiMSJ9.6b5uaKQnxksDcVrXcjLufX-0N2nFuyKx04D5vgZqYKU",
+	"user": {
+		"email": "joao@joao.com",
+		"age": "20",
+		"favoriteGames": [
+			{
+				"name": "Fortinite",
+				"genre": "Battle royale"
+			},
+			{
+				"name": "PUBG",
+				"genre": "Battle royale"
+			},
+			{
+				"name": "Valorant",
+				"genre": "FPS"
+			},
+			{
+				"name": "Minecraft",
+				"genre": "Survival"
+			}
+		],
+		"socialMedia": "@joao_borchoski",
+		"id": 1
+	}
 }
 ```
 
@@ -68,19 +97,31 @@ Modelo de resposta caso de certo:
 
 ```
 {
-"accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvYW9Aam9hby5jb20iLCJpYXQiOjE2NzI3NTA0NzgsImV4cCI6MTY3Mjc1NDA3OCwic3ViIjoiMSJ9.HrlTeC6hF1dWgIIOiIFd8ynUBkxCuyLSmH4HMY5a6Ss",
-"user": {
-"email": "joao@joao.com",
-"age": "20",
-"favoriteGames": [
-"Fortnite",
-"Valorant",
-"Minecraft"
-],
-"socialMedia": "@joao_borchoski",
-"id": 1,
-"name": "joao"
-}
+	"accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvYW9Aam9hby5jb20iLCJpYXQiOjE2NzI3NjU1MDEsImV4cCI6MTY3Mjc2OTEwMSwic3ViIjoiMSJ9.ojLu8K2tUfUTCexEI8Qpclrj4lMpp0ei5y5_nGrOXTg",
+	"user": {
+		"email": "joao@joao.com",
+		"age": "20",
+		"favoriteGames": [
+			{
+				"name": "Fortinite",
+				"genre": "Battle royale"
+			},
+			{
+				"name": "PUBG",
+				"genre": "Battle royale"
+			},
+			{
+				"name": "Valorant",
+				"genre": "FPS"
+			},
+			{
+				"name": "Minecraft",
+				"genre": "Survival"
+			}
+		],
+		"socialMedia": "@joao_borchoski",
+		"id": 1
+	}
 }
 ```
 
@@ -115,13 +156,26 @@ Modelo de resposta caso de certo:
 
 ```
 {
-	"email": "joao@joao.com",
-	"password": "$2a$10$i5DXc0KFVTCDXWI/Pv3P1.Z3LsYZLdMtHkWja7qhU4ufMNa5qs6vO",
+		"email": "joao@joao.com",
+	"password": "$2a$10$TmkqJZ3wgsLNWN8MInbfFeWQPiEDkcI4lXy3yDeW7HVx9MYT3ufO2",
 	"age": "32",
 	"favoriteGames": [
-		"Fortnite",
-		"Valorant",
-		"Minecraft"
+		{
+			"name": "Fortinite",
+			"genre": "Battle royale"
+		},
+		{
+			"name": "PUBG",
+			"genre": "Battle royale"
+		},
+		{
+			"name": "Valorant",
+			"genre": "FPS"
+		},
+		{
+			"name": "Minecraft",
+			"genre": "Survival"
+		}
 	],
 	"socialMedia": "@joao_borchoski",
 	"id": 1,
@@ -293,7 +347,7 @@ Modelo de resposta caso de certo:
 ```
 
 Modelo de resposta caso de errado:
-```{"Descrição do erro"}```
+`{"Descrição do erro"}`
 
 ### Para listar um usuario especifico use:
 
@@ -320,4 +374,4 @@ Modelo de resposta caso de certo:
 ```
 
 Modelo de resposta caso de errado:
-```{"Descrição do erro"}```
+`{"Descrição do erro"}`

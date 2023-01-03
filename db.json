@@ -2,12 +2,25 @@
   "users": [
     {
       "email": "joao@joao.com",
-      "password": "$2a$10$i5DXc0KFVTCDXWI/Pv3P1.Z3LsYZLdMtHkWja7qhU4ufMNa5qs6vO",
-      "age": "20",
+      "password": "$2a$10$TmkqJZ3wgsLNWN8MInbfFeWQPiEDkcI4lXy3yDeW7HVx9MYT3ufO2",
+      "age": "32",
       "favoriteGames": [
-        "Fortnite",
-        "Valorant",
-        "Minecraft"
+        {
+          "name": "Fortinite",
+          "genre": "Battle royale"
+        },
+        {
+          "name": "PUBG",
+          "genre": "Battle royale"
+        },
+        {
+          "name": "Valorant",
+          "genre": "FPS"
+        },
+        {
+          "name": "Minecraft",
+          "genre": "Survival"
+        }
       ],
       "socialMedia": "@joao_borchoski",
       "id": 1,
@@ -15,14 +28,15 @@
     },
     {
       "email": "anna@anna.com",
-      "password": "$2a$10$y.nBDceslzxMiG8Cif.Pvec35qKxJ742Mz9tml76AJHbkblAS1lya",
+      "password": "$2a$10$xXKSgcc8QD1pnc8HaUvpy.9.48lBUaX.8Lxlzwdq9E10OTJ1oD72K",
       "age": "20",
       "favoriteGames": [
-        "Fortnite",
-        "Valorant",
-        "Minecraft"
+        {
+          "name": "Disney Dreamlight Valley",
+          "genre": "RPG"
+        }
       ],
-      "socialMedia": "@joao_borchoski",
+      "socialMedia": "anna",
       "id": 2
     }
   ],

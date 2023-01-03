@@ -132,6 +132,7 @@ Modelo de resposta caso de errado:
 `{"Descrição do erro"}`
 
 <br/>
+
 # User
 
 Rotas utilizadas para fins relacionados ao usuario
@@ -206,6 +207,7 @@ Modelo de resposta caso de errado:
 `{"Descrição do erro"}`
 
 <br/>
+
 ## Posts
 
 ### Criação de Post

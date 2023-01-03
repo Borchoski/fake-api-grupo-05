@@ -54,7 +54,7 @@ Modelo de resposta caso de certo:
 
 Modelo de resposta caso de errado:
 
-```{"Descrição do erro"}```
+`{"Descrição do erro"}`
 
 ## Login
 
@@ -94,15 +94,16 @@ Modelo de resposta caso de certo:
 ```
 
 Modelo de resposta caso de errado:
-```{"Descrição do erro"}```
+`{"Descrição do erro"}`
 
 <!-- # Rotas que necessitam de autorização -->
 
 ## User
+
 Rotas utilizadas para fins relaçionados ao usuario
 <br/>
 
-### Rotas que necessitam de autorização:
+## Rotas que necessitam de autorização:
 
 ### Atualização do próprio Usuario
 
@@ -138,7 +139,7 @@ Modelo de resposta caso de certo:
 ```
 
 Modelo de resposta caso de errado:
-```{"Descrição do erro"}```
+`{"Descrição do erro"}`
 
 ### Deletar próprio Usuario
 
@@ -155,14 +156,110 @@ Modelo de resposta caso de certo:
 ```
 
 Modelo de resposta caso de errado:
-```{"Descrição do erro"}```
+`{"Descrição do erro"}`
 
+### Criação de Post
 
+POST /posts
 
+Modelo de Requisição:
 
+```
+{
+	"title": "Um titulo aqui",
+	"content": "Um conteudo aqui",
+	"userId": "1"
+}
+```
 
+#### Respostas Da Resquisição: <br/>
 
-<!-- ## Requerer Usuarios
+Modelo de resposta caso de certo:
+
+```
+{
+	"title": "Um titulo aqui",
+	"content": "Um conteudo aqui",
+	"userId": "1",
+	"id": 1
+}
+```
+
+Modelo de resposta caso de errado:
+`{"Descrição do erro"}`
+
+### Atualizar Post
+
+PATCH /posts/:post_id
+
+Modelo de Requisição:
+
+```
+{
+	"title": "Outro title para o post"
+}
+```
+
+#### Respostas Da Resquisição: <br/>
+
+Modelo de resposta caso de certo:
+
+```
+{
+	"title": "Outro title para o post",
+	"content": "Um conteudo aqui",
+	"userId": "1",
+	"id": 1
+}
+```
+
+Modelo de resposta caso de errado:
+`{"Descrição do erro"}`
+
+### Deletar Post
+
+DELETE /posts/:post_id
+
+Requisição sem body
+
+#### Respostas Da Resquisição: <br/>
+
+Modelo de resposta caso de certo:
+
+```
+{}
+```
+
+Modelo de resposta caso de errado:
+`{"Descrição do erro"}`
+
+## Rotas que necessitam de autorização:
+
+### Listar Posts
+
+GET /posts
+
+Requisição sem body
+
+#### Respostas Da Resquisição: <br/>
+
+Modelo de resposta caso de certo:
+
+```
+[
+	{
+		"title": "Um titulo aqui",
+		"content": "Um conteudo aqui",
+		"userId": "1",
+		"id": 1
+	}
+]
+```
+
+Modelo de resposta caso de errado:
+`{"Descrição do erro"}`
+
+### Listar Usuarios
 
 ### Para listar todos os usuarios use:
 
@@ -232,4 +329,4 @@ Modelo de resposta caso de certo:
 ```
 
 Modelo de resposta caso de errado:
-```{"Descrição do erro"}``` -->
+```{"Descrição do erro"}```

@@ -10,11 +10,11 @@ A API tem um total de 6 endpoints, podendo cadastrar seu usuario, realizar login
 
 Para ter a sua base URl rode a API localmente e use "localhost:3001"
 
-## Rotas que não necessitam de autorização
+# Rotas que não necessitam de autorização
 
 ### Cadastro
 
-POST /register 
+POST /register
 
 Modelo de Requisição:
 
@@ -29,8 +29,6 @@ Modelo de Requisição:
 "socialMedia": "@joao_borchoski"
 }
 ```
-
-
 
 #### Respostas Da Resquisição: <br/>
 
@@ -69,9 +67,7 @@ Modelo de Requisição:
 }
 ```
 
-
 #### Respostas Da Resquisição: <br/>
-
 
 Modelo de resposta caso de certo:
 
@@ -96,7 +92,79 @@ Modelo de resposta caso de certo:
 Modelo de resposta caso de errado:
 {"Descrição do erro"}
 
-## Rotas que necessitam de autorização
+### Requerer Usuarios
+
+### Para listar todos os usuarios use:
+
+GET /users
+
+Requisição sem body.
+
+#### Respostas Da Resquisição: <br/>
+
+Modelo de resposta caso de certo:
+
+```
+[
+    	{
+		"email": "joao@joao.com",
+		"password": "$2a$10$i5DXc0KFVTCDXWI/Pv3P1.Z3LsYZLdMtHkWja7qhU4ufMNa5qs6vO",
+		"age": "20",
+		"favoriteGames": [
+			"Fortnite",
+			"Valorant",
+			"Minecraft"
+		],
+		"socialMedia": "@joao_borchoski",
+		"id": 1,
+		"name": "joao"
+	},
+	{
+		"email": "anna@anna.com",
+		"password": "$2a$10$y.nBDceslzxMiG8Cif.Pvec35qKxJ742Mz9tml76AJHbkblAS1lya",
+		"age": "20",
+		"favoriteGames": [
+			"Fortnite",
+			"Valorant",
+			"Minecraft"
+		],
+		"socialMedia": "@joao_borchoski",
+		"id": 2
+	}
+]
+```
+
+Modelo de resposta caso de errado:
+`{"Descrição do erro"}`
+
+### Para listar um usuario especifico use:
+
+GET /users/:id
+
+Requisição sem body.
+
+Modelo de resposta caso de certo:
+
+```
+{
+	"email": "joao@joao.com",
+	"password": "$2a$10$i5DXc0KFVTCDXWI/Pv3P1.Z3LsYZLdMtHkWja7qhU4ufMNa5qs6vO",
+	"age": "20",
+	"favoriteGames": [
+		"Fortnite",
+		"Valorant",
+		"Minecraft"
+	],
+	"socialMedia": "@joao_borchoski",
+	"id": 1,
+	"name": "joao"
+}
+```
+
+Modelo de resposta caso de errado:
+`{"Descrição do erro"}`
+
+# Rotas que necessitam de autorização
 
 ### Atualização do Usuario
 
@@ -131,9 +199,8 @@ Modelo de resposta caso de certo:
 }
 ```
 
-
 Modelo de resposta caso de errado:
-{"Descrição do erro"}
+`{"Descrição do erro"}`
 
 ### Deletar Usuario
 

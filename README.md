@@ -3,6 +3,15 @@
 Esse é o repositório com a base de JSON-Server + JSON-Server-Auth já configurada, feita para ser usada em nosso Projeto FrontEnd.
 <br/>
 
+Para rodar a Api localmente apenas é necessario fazer o clone do repositório e em seguida digitar os seguintes comandos no terminal
+
+`` yarn `` 
+Para instalar toda as dependências
+
+<br/>
+
+`` node server.js ``
+Para Rodar a Api localmente
 ## Cadastro
 
 POST /register

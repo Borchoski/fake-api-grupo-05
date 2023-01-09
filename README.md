@@ -98,7 +98,7 @@ Modelo de Requisição:
 ```
 {
 "email": "joao@joao.com",
-"password": "1212"
+"password": "121212"
 }
 ```
 
